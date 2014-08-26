@@ -713,12 +713,12 @@ and (max-width : 800px) {
 	}
 
 	.how_we_roll li, .how_we_roll li:nth-child(1), .how_we_roll li:nth-child(2), .how_we_roll li:nth-child(3), .how_we_roll li:nth-child(4), .how_we_roll li:nth-child(5) {
-		width: 100%;
+		width: 43%;
 		float: none;
 		background-image: none;
 		border: 1px solid #00b3dc;
 		margin-bottom: 10px;
-		height: 12vw;
+		height: 13vw;
 	}
 
 	.how_we_roll li:hover {
@@ -760,7 +760,7 @@ and (max-width : 580px) {
 /* Styles */
 
   
-	
+
 
 
 
