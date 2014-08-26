@@ -69,6 +69,36 @@ a:hover{
 	margin: 0 auto;
 }
 
+header.top {
+	height: 60px;
+	width: 100%;
+	/*background: rgba(0,120,200,.8);*/
+	background: #000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	opacity: .9;
+}
+header.top:after {
+	content: "";
+	display: block;
+	position: absolute;
+	height: 1px;
+	width: 80%;
+	left: 10%;
+	bottom: 0px;
+background: rgb(10,10,10); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(10,10,10,1) 0%, rgba(137,137,137,1) 50%, rgba(10,10,10,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(10,10,10,1)), color-stop(50%,rgba(137,137,137,1)), color-stop(100%,rgba(10,10,10,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(10,10,10,1) 0%,rgba(137,137,137,1) 50%,rgba(10,10,10,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(10,10,10,1) 0%,rgba(137,137,137,1) 50%,rgba(10,10,10,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(10,10,10,1) 0%,rgba(137,137,137,1) 50%,rgba(10,10,10,1) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(10,10,10,1) 0%,rgba(137,137,137,1) 50%,rgba(10,10,10,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0a0a', endColorstr='#0a0a0a',GradientType=1 ); /* IE6-9 */
+
+}
+
 .container { 
 	width: 100%; 
 	overflow: hidden;
@@ -87,7 +117,7 @@ p {
 }
 
 .center {
-	width: 550px;
+	width: 70%;
 	margin: 0 auto;
 }
 
@@ -170,7 +200,7 @@ footer span {
 	        animation-delay: .35s;
 	background: url(../img/container_1.svg) 0 0 no-repeat;
 	background-size: contain;
-	height: 11.8vw;
+	height: 12.8vw;
 }
 
 /*.actions li:before {
@@ -194,7 +224,7 @@ footer span {
 	        animation-delay: .5s;
 	        background: url(../img/container_2.svg) 0 0 no-repeat;
 	background-size: contain;
-	height: 13.3vw;
+	height: 14.3vw;
 }
 
 .actions li:nth-child(3) {
@@ -203,7 +233,7 @@ footer span {
 	        animation-delay: .65s;
 	        background: url(../img/container_3.svg) 0 0 no-repeat;
 	background-size: contain;
-	height: 14.7vw;
+	height: 15.7vw;
 }
 
 .actions li:nth-child(4) {
@@ -212,7 +242,7 @@ footer span {
 	        animation-delay: .8s;
 	        background: url(../img/container_4.svg) 0 0 no-repeat;
 	background-size: contain;
-	height: 16vw;
+	height: 17.3vw;
 }
 
 
@@ -242,7 +272,7 @@ footer span {
 .better_together .actions li {
 	position: relative;
 	float: left;
-	width: 22%;
+	width: 23.4%;
 	margin: 5px 2% 5px 0;
 	padding: 14px;
 	text-transform: uppercase;
@@ -547,6 +577,29 @@ footer span {
 
 
 
+/* rotation stuff ------------ */
+
+
+section {
+	-webkit-transform: rotate(5deg);
+}
+
+.inner {
+	-webkit-transform: rotate(-5deg);
+	margin: -5vw 0;
+	padding: 5vw 0; 
+	background-size: cover;
+}
+
+.container {
+	height: 100%;
+	width: 120%;
+	margin: 0 -10%;
+}
+
+.sharks:before, .better_together:before  {
+	-webkit-transform: rotate(-5deg);
+}
 
 
 
@@ -598,65 +651,6 @@ footer span {
 
 
 
-
-
-
-
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 580px) {
-/* Styles */
-
-  
-
-
-
-
-
-}
-
-/* tablets ----------- */
-@media only screen 
-and (max-width : 800px) {
-/* Styles */
-  
-	.better_together .inner {
-		background-size: cover;
-	}
-
-	.how_we_roll li {
-		width: 17%;
-	}
-
-	.how_we_roll li:nth-child(1) {
-		height: 16.8vw;
-	}
-
-	.how_we_roll li:nth-child(2) {
-		height: 18vw;
-	}
-
-	.how_we_roll li:nth-child(3) {
-		height: 19.5vw;
-	}
-
-	.how_we_roll li:nth-child(4) {
-		height: 21.1vw;
-	}
-
-	.how_we_roll li:nth-child(5) {
-		height: 22.5vw;
-	}
-
-
-
-
-}
-
-
-
-
-
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1280px) {
@@ -676,28 +670,104 @@ and (min-width : 1280px) {
 
 
 
-/* rotation stuff ------------ */
+
+/* tablets ----------- */
+@media only screen 
+and (max-width : 800px) {
+/* Styles */
+  
+	section {
+		-webkit-transform: rotate(0deg);
+	}
+
+	.inner {
+		-webkit-transform: rotate(0deg);
+		margin: -5vw 0;
+		padding: 5vw 0; 
+	}
+
+	.container {
+		height: 100%;
+		width: 120%;
+		margin: 0 -10%;
+	}
+
+	.sharks:before, .better_together:before  {
+		-webkit-transform: rotate(0deg);
+	}
+
+	.better_together .actions li {
+		background-image: none;
+		border: 1px solid #fff;
+		float: none;
+		width: 100%;
+	}
+
+	.better_together .actions li:hover {
+		background-image: none;
+		background-color: rgb(255,255,255,.2);
+	}
+
+	.better_together .block {
+		padding-bottom: 10vw;
+	}
+
+	.how_we_roll li, .how_we_roll li:nth-child(1), .how_we_roll li:nth-child(2), .how_we_roll li:nth-child(3), .how_we_roll li:nth-child(4), .how_we_roll li:nth-child(5) {
+		width: 100%;
+		float: none;
+		background-image: none;
+		border: 1px solid #00b3dc;
+		margin-bottom: 10px;
+		height: 12vw;
+	}
+
+	.how_we_roll li:hover {
+		background-image: none;
+		background-color: #00b3dc;
+	}
+
+	.how_we_roll .arrows {
+		display: none;
+	}
+
+	.how_we_roll .block {
+		padding-bottom: 5vw;
+		padding-top: 0;
+	}
+
+	.sharks .block {
+		margin-top: 100px;
+	}
+
+	.building_the_future .block {
+		padding-bottom: 0;
+	}
 
 
-section {
-	-webkit-transform: rotate(5deg);
+
+
 }
 
-.inner {
-	-webkit-transform: rotate(-5deg);
-	margin: -5vw 0;
-	padding: 5vw 0; 
+
+
+
+
+
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 580px) {
+/* Styles */
+
+  
+	
+
+
+
+
 }
 
-.container {
-	height: 100%;
-	width: 120%;
-	margin: 0 -10%;
-}
 
-.sharks:before, .better_together:before  {
-	-webkit-transform: rotate(-5deg);
-}
 
 
 

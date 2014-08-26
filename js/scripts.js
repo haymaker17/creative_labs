@@ -11,7 +11,6 @@ function sendMailTo(name, company, domain) {
 }
 
 
-
 function fadeinElements() {
     /* Check the location of each desired element */
     $('.fadeinElement').each(function(i) {
@@ -41,7 +40,7 @@ $(function(){
 	//parallax();
 	fadeinElements();
 
-	scroll_window.bind('scroll', function(){
+	$(window).bind('scroll', function(){
 		//parallax();
 		fadeinElements();
 	});
@@ -49,7 +48,7 @@ $(function(){
     // Init Skrollr
     skrollr.init({
         smoothScrolling: false,
-        mobileDeceleration: 0.004,
+        // mobileDeceleration: 0.004,
         forceHeight: false
     });
 
