@@ -21,5 +21,25 @@ $(function(){
         forceHeight: false
     });
 
+    $(".video_box").on("click",function(){
+    	var video = $(this).find("video").get(0);
+
+    	if (!$(this).hasClass("playing")) {
+    		video.play();
+    		$(this).addClass("playing");
+    	}
+
+
+    	// if (video.paused) {
+    	// 	video.play();
+    	// 	$(this).addClass("playing");
+    	// }
+    	// else {
+    	// 	video.pause();
+    	// 	$(this).removeClass("playing");
+    	// }
+
+    });
+
 
 })

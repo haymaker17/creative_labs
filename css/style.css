@@ -26,7 +26,7 @@ body {
 	font-family: "proxima-nova",sans-serif;
 	font-size: 1.2rem;
 	font-weight: 200;
-	color: rgba(255,255,255,1);
+	color: rgb(255,255,255);
 	background: #000;
 	width: 100%;
 
@@ -48,6 +48,7 @@ h3 span {
 a {
 	text-decoration: none;
 	color: rgb(255,255,255);
+	padding: 3px 10px;
 }
 
 a:hover{
@@ -55,13 +56,14 @@ a:hover{
 	background: rgba(255,255,255,.1);
 }
 
-.button {
+a.button, a.button:hover {
 	display: inline-block;
 	border: 1px solid #fff;
 	padding: 3px 25px;
 	border-radius: 3px;
 	margin-top: 2.5rem;
 }
+
 
 .top_container {
 	width: 100%;
@@ -72,6 +74,7 @@ a:hover{
 
 
 .tab {
+	display: none;
 	position: fixed;
 	top: 30px;
 	left: 0px;
@@ -129,14 +132,13 @@ a:hover{
 
 .container { 
 	width: 100%; 
-	overflow: hidden;
 	position: relative;
 	text-align: center;
 } 
 
 .block {
 	margin: 0 auto;
-	width: 70%;
+	width: 84vw;
 	padding: 3rem 0 5rem;
 }
 
@@ -168,8 +170,7 @@ footer span {
 
 .better_together .inner { 
 	background: #000 url(../img/bg1.jpg) center 0 no-repeat; 
-	background-size: 120%;
-	min-height: 800px;
+	background-size: cover%;
 	-webkit-transition: background-size .25s ease;
 	   -moz-transition: background-size .25s ease;
 	    -ms-transition: background-size .25s ease;
@@ -181,22 +182,18 @@ footer span {
 	content: "";
 	display: block;
 	position: absolute;
-	left: 7%;
+	left: 0;
 	top: 0;
 	z-index: 1;
 	background: url(../img/poly1.png) no-repeat;
-	height: 420px;
-	width: 312px;
+	height: 40vw;
+	width: 25%;
 	background-size: cover;
 }
 
 .better_together .center, .sharks .center {
 	line-height: 4rem;
 	text-transform: uppercase;
-}
-
-.better_together .block {
-	padding-bottom: 0.5rem;
 }
 
 .better_together .actions {
@@ -219,7 +216,6 @@ footer span {
 	-webkit-animation: popUp 0.4s ease-in-out forwards;
 	   -moz-animation: popUp 0.4s ease-in-out forwards;
 	        animation: popUp 0.4s ease-in-out forwards;
-	opacity: 0;
 }
 
 .better_together .actions li {
@@ -227,7 +223,7 @@ footer span {
 	float: left;
 	height: 14vw;
 	width: 14vw;
-	margin: 5px 2% 5px 0;
+	margin: 5px 2vw 5px 0;
 	padding: 3vw 14px 14px 14px;
 	/*text-transform: uppercase;*/
 	background: rgba(0,120,200,.75);
@@ -284,6 +280,10 @@ footer span {
 	background-size: cover;
 }
 
+.better_together .block {
+	padding-bottom: 10vw;
+}
+
 .better_together .more {
 	position: absolute;
 	bottom: 0px;
@@ -322,12 +322,35 @@ footer span {
 	margin-right: 0;
 }
 
+.missed_something:before {
+	display: block;
+	content: "";
+	background: url(../img/angle_top_blue.svg) no-repeat;
+	background-size: cover;
+	height: 9.2vw;
+	width: 100%;
+	position: absolute;
+	top: -9vw;
+	z-index: 2;
+}
 
+.missed_something .angle_top {
+	fill: #0078c8;
+}
 
 .missed_something .inner { 
-	background: #0078c8 url(../img/video_bg.jpg) center bottom no-repeat; 
+	background: #0078c8; 
 	background-size: 90%;
-	padding-bottom: 30vw;
+}
+
+.missed_something .block {
+	padding-top: 0;
+}
+
+.missed_something .mosaic img {
+	width: 100%;
+	height: auto;
+	/*backgorund: url(../img/video_bg.jpg) center bottom no-repeat;*/
 }
 
 .how_we_roll {
@@ -335,8 +358,33 @@ footer span {
 	color: #383f46;
 }
 
+.how_we_roll:after {
+	display: block;
+	content: "";
+	background: url(../img/angle_bottom_white.svg) no-repeat;
+	background-size: cover;
+	height: 9.2vw;
+	width: 100%;
+	position: absolute;
+	bottom: -9vw;
+	z-index: 2;
+}
+
+.how_we_roll:before {
+	display: block;
+	content: "";
+	background: url(../img/angle_top_white.svg) no-repeat;
+	background-size: cover;
+	height: 9.2vw;
+	width: 100%;
+	position: absolute;
+	top: -9vw;
+	z-index: 2;
+}
+
 .how_we_roll .block {
 	padding-bottom: 0;
+	padding-top: 0;
 }
 
 .how_we_roll ul {
@@ -401,7 +449,7 @@ footer span {
 
 .how_we_roll li:nth-child(5) {
 	background: url(../img/roll_bg_5.svg) no-repeat; 
-	height: 17.1vw;
+	height: 17.4vw;
 	-webkit-animation-delay: .95s;
 	   -moz-animation-delay: .95s;
 	        animation-delay: .95s;
@@ -472,43 +520,59 @@ footer span {
 
 .sharks .inner { 
 	background: #003851 url(../img/bg_shark.jpg) center 0 no-repeat; 
-	background-size: contain;
+	background-size: cover;
 }
 
 .sharks:before {
 	content: "";
 	display: block;
 	position: absolute;
-	right: 8%;
+	right: 0;
 	top: 20%;
 	z-index: 1;
 	background: url(../img/poly2.png) no-repeat;
-	height: 558px;
-	width: 304px;
+	height: 40vw;
+	width: 20%;
 	background-size: cover;
 }
 
 .sharks .block {
-	margin-top: 500px;
+	padding-top: 20vw;
+	padding-bottom: 14vw;
 }
 
-.building_the_future {
-	padding-bottom: 5vw;
-}
-
-.video {
+.building_the_future:before {
+	display: block;
+	content: "";
+	background: url(../img/angle_top_black.svg) no-repeat;
+	background-size: cover;
+	height: 9.2vw;
 	width: 100%;
-	heigth: auto;
-	height: 415px;
-	border: 1px solid rgba(255,255,255,.2);
-	margin-top: 80px;
+	position: absolute;
+	top: -9vw;
+	z-index: 2;
 }
 
-.video:before {
+.building_the_future .block {
+	padding-top: 0;
+}
+
+.video_box {
+	width: 100%;
+	border: 1px solid rgba(255,255,255,.2);
+	background: rgb(16,130,208);
+}
+
+.video_box video {
+	height: 480px;
+	width: auto;
+}
+
+.video_box:before {
 	content: "";
 	display: block;
 	position: absolute;
-	top: 58%;
+	top: 50%;
 	left: 50%;
 	margin: 80px 0 0 -50px;
 	z-index: 1;
@@ -516,6 +580,10 @@ footer span {
 	height: 109px;
 	width: 109px;
 	background-size: cover;
+}
+
+.video_box.playing:before {
+	background: none;
 }
 
 
@@ -565,7 +633,7 @@ footer span {
 /* rotation stuff ------------ */
 
 
-section {
+/*section {
 	-webkit-transform: rotate(5deg);
 }
 
@@ -587,7 +655,7 @@ section {
 }
 
 
-
+*/
 
 
 
@@ -642,9 +710,6 @@ and (min-width : 1280px) {
 /* Styles */
 
  
-	.better_together .inner { 
-		background-size: 100%;
-	} 
 
 
 }
@@ -661,41 +726,16 @@ and (min-width : 1280px) {
 and (max-width : 800px) {
 /* Styles */
   
-	section {
-		-webkit-transform: rotate(0deg);
-	}
 
-	.inner {
-		-webkit-transform: rotate(0deg);
-		margin: -5vw 0;
-		padding: 5vw 0; 
-	}
-
-	.container {
-		height: 100%;
-		width: 120%;
-		margin: 0 -10%;
-	}
-
-	.sharks:before, .better_together:before  {
-		-webkit-transform: rotate(0deg);
+	.block {
+		width: 96vw;
 	}
 
 	.better_together .actions li {
-		background-image: none;
-		border: 1px solid #fff;
 		float: none;
 		width: 100%;
 	}
 
-	.better_together .actions li:hover {
-		background-image: none;
-		background-color: rgb(255,255,255,.2);
-	}
-
-	.better_together .block {
-		padding-bottom: 10vw;
-	}
 
 	.how_we_roll li, .how_we_roll li:nth-child(1), .how_we_roll li:nth-child(2), .how_we_roll li:nth-child(3), .how_we_roll li:nth-child(4), .how_we_roll li:nth-child(5) {
 		width: 43%;
@@ -704,11 +744,6 @@ and (max-width : 800px) {
 		border: 1px solid #00b3dc;
 		margin-bottom: 10px;
 		height: 13vw;
-	}
-
-	.how_we_roll li:hover {
-		background-image: none;
-		background-color: #00b3dc;
 	}
 
 	.how_we_roll .arrows {
@@ -720,14 +755,10 @@ and (max-width : 800px) {
 		padding-top: 0;
 	}
 
-	.sharks .block {
-		margin-top: 100px;
+	.video_box video {
+		height: 100%;
+		width: 100%;
 	}
-
-	.building_the_future .block {
-		padding-bottom: 0;
-	}
-
 
 
 
